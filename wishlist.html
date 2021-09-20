@@ -68,16 +68,10 @@
         width: 500px !important;
     }
 
-    .fade:not(.show) {
-        opacity: 1 !important;
-
-    }
-
     a :hover {
         color: #c13526 !important;
         text-decoration: none !important;
     }
-
 
     .material-icons {
         font-family: "Material Icons";
@@ -92,18 +86,6 @@
         word-wrap: normal;
         direction: ltr;
         -webkit-font-smoothing: antialiased;
-    }
-
-    .nao_lancado {
-        border-width: 1px !important;
-        border-style: outset !important;
-        border-color: #c13526 !important;
-    }
-
-    .lancado {
-        border-width: 1px !important;
-        border-style: outset !important;
-        border-color: rgb(0, 255, 21) !important;
     }
 
     *,
@@ -223,7 +205,7 @@
         outline: none;
     }
 
-    .modal-body img {
+    .modal img {
         margin: auto !important;
         width: 100% !important;
     }
@@ -233,7 +215,6 @@
         justify-content: space-between !important;
     }
 </style>
-</head>
 
 <body>
     <div class="nintendo">
@@ -242,7 +223,6 @@
 
     <main>
         <br>
-
         <ul class="nav nav-tabs" id="myTab" role="tablist">
             <li class="nav-item" role="presentation">
                 <button class="nav-link active" id="lancado-tab" data-bs-toggle="tab" data-bs-target="#lancado"
@@ -256,10 +236,10 @@
                 <button class="nav-link" id="digital-tab" data-bs-toggle="tab" data-bs-target="#digital" type="button"
                     role="tab" aria-controls="digital" aria-selected="false">Sem prioridade</button>
             </li>
-
-           
         </ul>
+
         <div class="tab-content" id="myTabContent">
+            <!--  LANÇADOS -->
             <div class="tab-pane fade show active" id="lancado" role="tabpanel" aria-labelledby="lancado-tab">
                 <br><br>
                 <!-- PRIMEIRA LINHA -->
@@ -271,11 +251,12 @@
                             <img
                                 src="https://assets.nintendo.com/image/upload/c_pad,f_auto,h_613,q_auto,w_1089/ncom/pt_BR/games/switch/d/donkey-kong-country-tropical-freeze-switch/hero?v=2021091722">
                         </div>
+
                         <div class="content">
-                            <div class="header"> <a data-toggle="modal" data-target=#myModal2>Donkey Kong Country™:
+                            <div class="header"> <a data-bs-toggle="modal" data-bs-target="#myModal4">Donkey Kong
+                                    Country™:
                                     Tropical
-                                    Freeze
-                                </a></div>
+                                    Freeze</a></div>
                             <div class="meta">Nintendo</div>
 
                         </div>
@@ -301,7 +282,8 @@
                                 src="https://assets.nintendo.com/image/upload/c_pad,f_auto,h_613,q_auto,w_1089/ncom/en_US/games/switch/l/luigis-mansion-3-switch/hero?v=2021082100">
                         </div>
                         <div class="content">
-                            <div class="header"> <a data-toggle="modal" data-target=#myModal3>Luigi’s Mansion™ 3
+                            <div class="header"> <a data-bs-toggle="modal" data-bs-target="#myModal5">Luigi’s
+                                    Mansion™ 3
                                 </a></div>
                             <div class="meta">Nintendo</div>
 
@@ -328,7 +310,8 @@
                                 src="https://assets.nintendo.com/image/upload/c_pad,f_auto,h_613,q_auto,w_1089/ncom/pt_BR/games/switch/c/captain-toad-treasure-tracker-switch/hero?v=2021091700">
                         </div>
                         <div class="content">
-                            <div class="header"> <a data-toggle="modal" data-target=#myModal6>Captain Toad™: Treasure
+                            <div class="header"> <a data-bs-toggle="modal" data-bs-target="#myModal6">Captain Toad™:
+                                    Treasure
                                     Tracker</a></div>
                             <div class="meta">Nintendo</div>
                         </div>
@@ -341,15 +324,18 @@
                                     href="https://www.nintendo.com/pt_BR/games/detail/captain-toad-treasure-tracker-switch/"><i
                                         class="game icon large"></i></a>
                             </span>
+                            </span>
                             <span>
                                 <i class="game icon"></i>
                                 13/07/2018
                             </span>
                         </div>
                     </div>
-                </div>
 
+                </div>
             </div>
+
+            <!--  NÃO LANÇADOS -->
             <div class="tab-pane fade" id="nlancado" role="tabpanel" aria-labelledby="nlancado-tab">
                 <br><br>
                 <div class="ui link centered cards">
@@ -360,7 +346,10 @@
                                 src="https://assets.nintendo.com/image/upload/c_pad,f_auto,h_613,q_auto,w_1089/ncom/pt_BR/games/switch/m/metroid-dread-switch/hero?v=2021091520">
                         </div>
                         <div class="content">
-                            <div class="header"> <a data-toggle="modal" data-target=#myModal1>Metroid™ Dread</a></div>
+                            <div class="header">
+                                <a data-bs-toggle="modal" data-bs-target="#myModal1">Metroid™
+                                    Dread</a>
+                            </div>
                             <div class="meta">Nintendo</div>
 
                         </div>
@@ -385,8 +374,11 @@
                                 src="https://assets.nintendo.com/image/upload/c_pad,f_auto,h_613,q_auto,w_1089/ncom/en_US/games/switch/p/pokemon-legends-arceus-switch/hero?v=2021082021">
                         </div>
                         <div class="content">
-                            <div class="header"> <a data-toggle="modal" data-target=#myModal4>Pokémon™ Legends:
-                                    Arceus</a></div>
+                            <div class="header">
+                                <a data-bs-toggle="modal" data-bs-target="#myModal2">Pokémon™
+                                    Legends:
+                                    Arceus</a>
+                            </div>
                             <div class="meta">Nintendo</div>
 
                         </div>
@@ -411,10 +403,10 @@
                                 src="https://assets.nintendo.com/image/upload/c_pad,f_auto,h_613,q_auto,w_1089/ncom/en_US/games/switch/m/mario-party-superstars-switch/hero?v=2021081920">
                         </div>
                         <div class="content">
-                            <div class="header"> <a data-toggle="modal" data-target=#myModal5>Mario Party™
-                                    Superstars</a></div>
+                            <div class="header"> <a type="button" data-bs-toggle="modal"
+                                    data-bs-target="#myModal3">Mario Party™
+                                    Superstars</div>
                             <div class="meta">Nintendo</div>
-
                         </div>
                         <div class="extra content">
                             <span class="right floated">
@@ -432,9 +424,9 @@
                     </div>
 
 
-
                 </div>
             </div>
+            <!--  SEM PRIORIDADE -->
             <div class="tab-pane fade" id="digital" role="tabpanel" aria-labelledby="digital-tab">
                 <br><br>
                 <div class="ui link centered cards">
@@ -445,7 +437,8 @@
                                 src="https://assets.nintendo.com/image/upload/c_pad,f_auto,h_613,q_auto,w_1089/ncom/pt_BR/games/switch/s/super-mario-odyssey-switch/hero?v=2021082110">
                         </div>
                         <div class="content">
-                            <div class="header"> <a data-toggle="modal" data-target=#myModal>Super Mario Odyssey™</a>
+                            <div class="header"> <a data-toggle="modal" data-target=#myModal>Super Mario
+                                    Odyssey™</a>
                             </div>
                             <div class="meta">Nintendo</div>
 
@@ -520,21 +513,22 @@
                 </div>
             </div>
 
-            <!-- Primeiro modal -->
-            <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle">
-                <div class="modal-dialog modal-dialog-centered" role="document">
+            <!-- MODAIS NÃO LANÇADOS -->
+
+            <!-- Modal Metroid -->
+            <div class="modal fade" id="myModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
                             <h5 class="modal-title">Metroid™ Dread</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
                             <img
                                 src="https://assets.nintendo.com/image/upload/c_pad,f_auto,h_613,q_auto,w_1089/ncom/pt_BR/games/switch/m/metroid-dread-switch/hero?v=2021091520">
                             </a>
                         </div>
+
                         <div class="modal-footer lojas">
                             <a target="_blank"
                                 href="https://www.atacadodosjogos.com.br/pre-venda-metroid-dread-switch.html">
@@ -550,79 +544,14 @@
                     </div>
                 </div>
             </div>
-            <!-- Segundo modal -->
-            <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-                aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
+
+            <!-- Modal Pokemon -->
+            <div class="modal fade" id="myModal2" tabindex="-1" aria-labelledby="exampleModalLabel2">
+                <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                            <h5 class="modal-title">Donkey Kong Country™: Tropical Freeze
-                            </h5>
-                        </div>
-                        <div class="modal-body">
-                            <img
-                                src="https://assets.nintendo.com/image/upload/c_pad,f_auto,h_613,q_auto,w_1089/ncom/pt_BR/games/switch/d/donkey-kong-country-tropical-freeze-switch/hero?v=2021091722">
-                            </a>
-                        </div>
-                        <div class="modal-footer lojas">
-                            <a target="_blank"
-                                href="https://www.atacadodosjogos.com.br/donkey-kong-country-tropical-freeze-switch.html">
-                                <img
-                                    src="https://www.atacadodosjogos.com.br/templates/default/images/logo-branca.png"></a>
-
-                            <a target="_blank" href="https://www.cogumeloshop.com.br/donkeyswitch">
-                                <img src="https://images.tcdn.com.br/img/img_prod/649042/1573651007_logo.png"></a>
-
-                            <a target="_blank" href="#">
-                                <img src="https://i.imgur.com/5FFKUs9.png"></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Terceiro modal -->
-            <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-                aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                            <h5 class="modal-title">Luigi’s Mansion™ 3
-                            </h5>
-                        </div>
-                        <div class="modal-body">
-                            <img
-                                src="https://assets.nintendo.com/image/upload/c_pad,f_auto,h_613,q_auto,w_1089/ncom/pt_BR/games/switch/l/luigis-mansion-3-switch/hero?v=2021082108">
-                            </a>
-                        </div>
-                        <div class="modal-footer lojas">
-                            <a target="_blank" href="https://www.atacadodosjogos.com.br/luigis-mansion-3-switch.html">
-                                <img
-                                    src="https://www.atacadodosjogos.com.br/templates/default/images/logo-branca.png"></a>
-
-                            <a target="_blank" href="https://www.cogumeloshop.com.br/lm3">
-                                <img src="https://images.tcdn.com.br/img/img_prod/649042/1573651007_logo.png"></a>
-
-                            <a target="_blank" href="#">
-                                <img src="https://i.imgur.com/5FFKUs9.png"></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Quarto modal -->
-            <div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-                aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
                             <h5 class="modal-title">Pokémon™ Legends: Arceus</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
                             <img
@@ -645,16 +574,14 @@
                     </div>
                 </div>
             </div>
-            <!-- Quinto modal -->
-            <div class="modal fade" id="myModal5" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-                aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
+
+            <!-- Modal Mario -->
+            <div class="modal fade" id="myModal3" tabindex="-1" aria-labelledby="exampleModalLabel3">
+                <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
                             <h5 class="modal-title">Mario Party™ Superstars</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
                             <img
@@ -662,7 +589,6 @@
                             </a>
                         </div>
                         <div class="modal-footer lojas">
-
                             <a target="_blank"
                                 href="https://www.atacadodosjogos.com.br/pre-venda-mario-party-superstars-switch.html">
                                 <img
@@ -678,16 +604,73 @@
                     </div>
                 </div>
             </div>
-            <!-- Sexto modal -->
-            <div class="modal fade" id="myModal6" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-                aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
+
+            <!-- MODAIS LANÇADOS -->
+
+            <!-- Modal Donkey Kong-->
+            <div class="modal fade" id="myModal4" tabindex="-1" aria-labelledby="myModal4" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
+                            <h5 class="modal-title">Donkey Kong Country™: Tropical Freeze</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img
+                                src="https://assets.nintendo.com/image/upload/c_pad,f_auto,h_613,q_auto,w_1089/ncom/pt_BR/games/switch/d/donkey-kong-country-tropical-freeze-switch/hero?v=2021091722">
+                            </a>
+                        </div>
+                        <div class="modal-footer lojas">
+                            <a target="_blank"
+                                href="https://www.atacadodosjogos.com.br/donkey-kong-country-tropical-freeze-switch.html">
+                                <img
+                                    src="https://www.atacadodosjogos.com.br/templates/default/images/logo-branca.png"></a>
+
+                            <a target="_blank" href="https://www.cogumeloshop.com.br/donkeyswitch">
+                                <img src="https://images.tcdn.com.br/img/img_prod/649042/1573651007_logo.png"></a>
+
+                            <a target="_blank" href="#">
+                                <img src="https://i.imgur.com/5FFKUs9.png"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal Luigi-->
+            <div class="modal fade" id="myModal5" tabindex="-1" aria-labelledby="myModal5" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Luigi’s Mansion™ 3</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img
+                                src="https://assets.nintendo.com/image/upload/c_pad,f_auto,h_613,q_auto,w_1089/ncom/pt_BR/games/switch/l/luigis-mansion-3-switch/hero?v=2021082108">
+                            </a>
+                        </div>
+                        <div class="modal-footer lojas">
+                            <a target="_blank" href="https://www.atacadodosjogos.com.br/luigis-mansion-3-switch.html">
+                                <img
+                                    src="https://www.atacadodosjogos.com.br/templates/default/images/logo-branca.png"></a>
+
+                            <a target="_blank" href="https://www.cogumeloshop.com.br/lm3">
+                                <img src="https://images.tcdn.com.br/img/img_prod/649042/1573651007_logo.png"></a>
+
+                            <a target="_blank" href="#">
+                                <img src="https://i.imgur.com/5FFKUs9.png"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal Toad-->
+            <div class="modal fade" id="myModal6" tabindex="-1" aria-labelledby="myModal6" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
                             <h5 class="modal-title">Captain Toad™: Treasure Tracker</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
                             <img
@@ -709,12 +692,7 @@
                     </div>
                 </div>
             </div>
-
-
 </body>
-<script>
-    $('#myModal').modal(options)
 
-</script>
 
 </html>
