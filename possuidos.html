@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LukinMar - Nintendo</title>
+    <link rel="icon" href="favicon.ico" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.js"></script>
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js"
+        integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link
+        href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+        rel="stylesheet">
+</head>
+
+<style>
+    :root {
+        overflow: hidden !important;
+    }
+
+    .lojas img {
+        height: 50px !important;
+    }
+
+    .nav-link {
+        color: #c13526 !important;
+        font-weight: bold !important;
+    }
+
+    .bigboy {
+        height: 50px !important;
+        /* height of container */
+        object-fit: cover !important;
+    }
+
+    a:not([href]):not([class]),
+    a:not([href]):not([class]):hover {
+        color: gray !important;
+        text-decoration: none !important;
+    }
+
+    a {
+        color: gray !important;
+        text-decoration: none !important;
+    }
+
+    @font-face {
+        font-family: "Material Icons" !important;
+        font-style: normal !important;
+        font-weight: 400 !important;
+        src: url(https://fonts.gstatic.com/s/materialicons/v97/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format("woff2");
+    }
+
+    .modal-sm {
+        width: 500px !important;
+    }
+
+    a :hover {
+        color: #c13526 !important;
+        text-decoration: none !important;
+    }
+
+    .material-icons {
+        font-family: "Material Icons";
+        font-weight: normal !important;
+        font-style: normal !important;
+        font-size: 24px !important;
+        line-height: 1 !important;
+        letter-spacing: normal;
+        text-transform: none;
+        display: inline-block;
+        white-space: nowrap;
+        word-wrap: normal;
+        direction: ltr;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: "Open Sans", Arial, sans-serif;
+        min-height: 100vh;
+        background-color: #fafafa;
+        color: #262626;
+        padding-bottom: 3rem;
+    }
+
+    img {
+        display: block;
+    }
+
+    @keyframes loader {
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #fafafa;
+    }
+
+    .navigationList {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        border-top: 1px solid #dbdbdb;
+        border-bottom: 1px solid #dbdbdb;
+    }
+
+    .navigationItem__Button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        background: transparent;
+        appearance: none;
+        -webkit-appearance: none;
+        padding: 12px 0;
+        cursor: pointer;
+    }
+
+    @media screen and (min-width: 980px) {
+        main {
+            max-width: 935px;
+            margin: auto;
+        }
+
+        .photosGrid__Photo {
+            height: 293px;
+        }
+    }
+
+    .nintendo {
+        background-color: #c13526;
+    }
+
+    a:focus,
+    a:hover {
+        color: #c13526;
+        text-decoration: none;
+    }
+
+    a {
+        color: gray;
+    }
+
+    .ui.card>.extra a:not(.ui):hover,
+    .ui.cards>.card>.extra a:not(.ui):hover {
+        color: #c13526 !important;
+    }
+
+    .nintendo img {
+        margin: 0 auto;
+        width: 50%;
+    }
+
+    .material-icons-sharp {
+        font-size: 19px;
+        margin-right: 3px;
+        margin-top: -2px;
+        color: #c13526;
+    }
+
+    .card {
+        cursor: default !important;
+        margin-bottom: 2em !important;
+        border-radius: 2px !important;
+    }
+
+    .segment {
+        width: 60%;
+        align-items: center;
+        text-align: center;
+        margin: 0 auto !important;
+        padding-bottom: 3% !important;
+    }
+
+    .btn-primary {
+        color: black;
+        background: none;
+        outline: none;
+    }
+
+    .modal img {
+        margin: auto !important;
+        width: 100% !important;
+    }
+
+    .modal-footer {
+        display: flex !important;
+        justify-content: space-between !important;
+    }
+</style>
+
+<body>
+    <div class="nintendo">
+        <a href="index.html"> <img src="https://images2.alphacoders.com/586/586169.jpg"></a>
+    </div>
+
+    <main>
+        <br>
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="fisico-tab" data-bs-toggle="tab" data-bs-target="#fisico"
+                    type="button" role="tab" aria-controls="fisico" aria-selected="true">Físico</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="digital-tab" data-bs-toggle="tab" data-bs-target="#digital" type="button"
+                    role="tab" aria-controls="digital" aria-selected="false">Digital</button>
+            </li>
+        </ul>
+
+        <div class="tab-content" id="myTabContent">
+            <!--  Físico -->
+            <div class="tab-pane fade show active" id="fisico" role="tabpanel" aria-labelledby="fisico-tab">
+                <br><br>
+                <!-- PRIMEIRA LINHA -->
+                <div class="ui link centered cards">
+
+                    <!-- Primeiro cartão -->
+                    <div class="card lancado">
+                        <div class="image">
+                            <img
+                                src="https://assets.nintendo.com/image/upload/c_pad,f_auto,h_613,q_auto,w_1089/ncom/pt_BR/games/switch/d/donkey-kong-country-tropical-freeze-switch/hero?v=2021091722">
+                        </div>
+
+                        <div class="content">
+                            <div class="header"> <a data-bs-toggle="modal" data-bs-target="#myModal4">Donkey Kong
+                                    Country™:
+                                    Tropical
+                                    Freeze</a></div>
+                            <div class="meta">Nintendo</div>
+
+                        </div>
+                        <div class="extra content">
+                            <span class="right floated">
+                                <a target="_blank" href="https://youtu.be/_5p0SiWHwvw"><i
+                                        class="youtube icon large"></i></a>
+                                <a target="_blank"
+                                    href="https://www.nintendo.com/pt_BR/games/detail/donkey-kong-country-tropical-freeze-switch/"><i
+                                        class="game icon large"></i></a>
+                            </span>
+                            <span>
+                                <i class="game icon"></i>
+                                04/05/2018
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Segundo cartão -->
+                    <div class="card lancado">
+                        <div class="image">
+                            <img
+                                src="https://assets.nintendo.com/image/upload/c_pad,f_auto,h_613,q_auto,w_1089/ncom/en_US/games/switch/l/luigis-mansion-3-switch/hero?v=2021082100">
+                        </div>
+                        <div class="content">
+                            <div class="header"> <a data-bs-toggle="modal" data-bs-target="#myModal5">Luigi’s
+                                    Mansion™ 3
+                                </a></div>
+                            <div class="meta">Nintendo</div>
+
+                        </div>
+                        <div class="extra content">
+                            <span class="right floated">
+                                <a target="_blank" href="https://youtu.be/RSGgCfbYrg0"><i
+                                        class="youtube icon large"></i></a>
+                                <a target="_blank"
+                                    href="https://www.nintendo.com/pt_BR/games/detail/luigis-mansion-3-switch/"><i
+                                        class="game icon large"></i></a>
+                            </span>
+                            <span>
+                                <i class="game icon"></i>
+                                31/10/2019
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Terceiro cartão -->
+                    <div class="card lancado">
+                        <div class="image">
+                            <img
+                                src="https://assets.nintendo.com/image/upload/c_pad,f_auto,h_613,q_auto,w_1089/ncom/pt_BR/games/switch/c/captain-toad-treasure-tracker-switch/hero?v=2021091700">
+                        </div>
+                        <div class="content">
+                            <div class="header"> <a data-bs-toggle="modal" data-bs-target="#myModal6">Captain Toad™:
+                                    Treasure
+                                    Tracker</a></div>
+                            <div class="meta">Nintendo</div>
+                        </div>
+                        <div class="extra content">
+                            <span class="right floated">
+                                <a target="_blank"
+                                    href="https://www.youtube.com/watch?v=Y8zQxSWaotc&ab_channel=Nintendo"><i
+                                        class="youtube icon large"></i></a>
+                                <a target=_blank
+                                    href="https://www.nintendo.com/pt_BR/games/detail/captain-toad-treasure-tracker-switch/"><i
+                                        class="game icon large"></i></a>
+                            </span>
+                            </span>
+                            <span>
+                                <i class="game icon"></i>
+                                13/07/2018
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!--  Digital -->
+            <div class="tab-pane fade" id="digital" role="tabpanel" aria-labelledby="digital-tab">
+                <br><br>
+                <div class="ui link centered cards">
+                    <!-- Primeiro cartão -->
+                    <div class="card">
+                        <div class="image">
+                            <img
+                                src="https://assets.nintendo.com/image/upload/c_pad,f_auto,h_613,q_auto,w_1089/ncom/pt_BR/games/switch/s/super-mario-odyssey-switch/hero?v=2021082110">
+                        </div>
+                        <div class="content">
+                            <div class="header"> <a data-toggle="modal" data-target=#myModal>Super Mario
+                                    Odyssey™</a>
+                            </div>
+                            <div class="meta">Nintendo</div>
+
+                        </div>
+                        <div class="extra content">
+                            <span class="right floated">
+                                <a target="_blank" href="https://youtu.be/5kcdRBHM7kM"><i
+                                        class="youtube icon large"></i></a>
+                                <a target="_blank"
+                                    href="https://www.nintendo.com/pt_BR/games/detail/super-mario-odyssey-switch/"><i
+                                        class="game icon large"></i></a>
+                            </span>
+                            <span>
+                                <i class="game icon"></i>
+                                27/10/2017
+                            </span>
+                        </div>
+                    </div>
+                    <!-- Segundo cartão -->
+                    <div class="card">
+                        <div class="image">
+                            <img
+                                src="https://assets.nintendo.com/image/upload/c_pad,f_auto,h_613,q_auto,w_1089/ncom/pt_BR/games/switch/m/mario-kart-8-deluxe-switch/hero?v=2021082117">
+                        </div>
+                        <div class="content">
+                            <div class="header"> <a data-toggle="modal" data-target=#myModal>Mario Kart™ 8 Deluxe
+                                </a></div>
+                            <div class="meta">Nintendo</div>
+
+                        </div>
+                        <div class="extra content">
+                            <span class="right floated">
+                                <a target="_blank" href="https://youtu.be/tKlRN2YpxRE"><i
+                                        class="youtube icon large"></i></a>
+                                <a target="_blank"
+                                    href="https://www.nintendo.com/pt_BR/games/detail/mario-kart-8-deluxe-switch/"><i
+                                        class="game icon large"></i></a>
+                            </span>
+                            <span>
+                                <i class="game icon"></i>
+                                28/04/2017
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Terceiro cartão -->
+                    <div class="card">
+                        <div class="image">
+                            <img
+                                src="https://assets.nintendo.com/image/upload/c_pad,f_auto,h_613,q_auto,w_1089/ncom/pt_BR/games/switch/s/super-mario-party-switch/hero?v=2021082104">
+                        </div>
+                        <div class="content">
+                            <div class="header"> <a data-toggle="modal" data-target=#myModal>Super Mario Party™
+                                </a></div>
+                            <div class="meta">Nintendo</div>
+
+                        </div>
+                        <div class="extra content">
+                            <span class="right floated">
+                                <a target="_blank" href="https://youtu.be/D7zTJLIYJds"><i
+                                        class="youtube icon large"></i></a>
+                                <a target="_blank"
+                                    href="https://www.nintendo.com/pt_BR/games/detail/super-mario-party-switch/"><i
+                                        class="game icon large"></i></a>
+                            </span>
+                            <span>
+                                <i class="game icon"></i>
+                                05/10/2018
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+</body>
+
+
+</html>
